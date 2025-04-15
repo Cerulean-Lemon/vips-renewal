@@ -1,0 +1,1027 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.container {
+  width: 1920px;
+  margin: 0 auto;
+}
+.header {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+
+.logo img {
+  width: 80%;
+  padding-top: 30px;
+  transform: translateX(15px);
+  text-align: center;
+}
+
+.nav {
+  width: 100%;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 90px;
+  padding: 25px 0 20px;
+  background-color: white;
+  position: relative;
+  z-index: 100;
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-item > a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover > a {
+  color: black !important;
+}
+
+.nav::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav:hover::after {
+  opacity: 1;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #a61d37;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-item:hover::after {
+  transform: scaleX(1);
+}
+.nav-dropdown-background {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background-color: white;
+  z-index: 90;
+}
+
+.nav:hover .nav-dropdown-background {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 180px;
+  margin-top: 20px;
+  text-align: center;
+  z-index: 100;
+}
+
+.nav:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  color: #a61d37;
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.banner-section {
+  position: relative;
+  width: 100%;
+  height: 640px;
+  background-color: white;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.banner-container {
+  width: 1280px;
+  height: 640px;
+  display: flex;
+  gap: 40px;
+  margin: 0 auto;
+  transition: transform 0.5s ease;
+  position: relative;
+}
+
+.banner-slide {
+  width: 1280px;
+  height: 640px;
+  flex-shrink: 0;
+}
+
+.banner-slide img {
+  width: 1280px;
+  height: 640px;
+  object-fit: contain;
+}
+
+.banner-indicators {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.indicator-dot {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.indicator-dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.indicator-dot.active {
+  background-color: #a61d37;
+  transform: scale(1.2);
+}
+.about-vips {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 150px;
+  margin-left: 80px;
+}
+
+.about-text {
+  width: 50%;
+  padding: 10px;
+}
+
+.about-text h3 {
+  font-size: 16px;
+  font-weight: lighter;
+  font-style: italic;
+  font-family: "Noto Serif", serif;
+  color: #a61d37;
+  margin: 0;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  margin: 0 0 30px 0;
+  line-height: 1.5em;
+  letter-spacing: -2px;
+}
+
+.about-text p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 30px 0 10px;
+  letter-spacing: -1px;
+}
+
+.about-image {
+  width: 45%;
+  padding: 10px;
+}
+
+.about-image img {
+  width: 80%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.vips-menu {
+  text-align: center;
+  padding: 200px 0 50px;
+}
+
+.vips-menu h2 {
+  font-size: 44px;
+  font-family: "Noto Serif", serif;
+  margin-bottom: 30px;
+  color: #222;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.vips-menu h2.visible {
+  opacity: 1;
+}
+
+.vips-menu h2 span {
+  font-size: 55px;
+  font-family: "Noto Serif", serif;
+  font-weight: bolder;
+  color: #a61d37;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1200px;
+  height: 1000px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  width: 30%;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease, transform 1s ease;
+}
+
+.menu-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+
+.menu-item h3 {
+  transition: color 0.3s ease;
+}
+
+.menu-item:hover h3 {
+  color: #c72946;
+}
+
+.menu-content {
+  position: absolute;
+  top: -8px;
+  left: 25px;
+  font-size: 24px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bolder;
+  color: white;
+  z-index: 1;
+}
+
+.add-button {
+  position: absolute;
+  padding: 5px 10px;
+  font-size: 18px;
+  background-color: white;
+  color: gray;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #a61d37;
+}
+
+.steak-button,
+.salad-button,
+.dessert-button {
+  top: 36px;
+  left: 280px;
+}
+.instagram-section {
+  padding: 50px 0;
+}
+
+.instagram-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.sns-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 16px;
+  padding-left: 4px;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 30px;
+}
+
+.instagram-grid a {
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.instagram-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.instagram-grid a:hover img {
+  transform: scale(1.05);
+}
+
+.instagram-logo-card {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  aspect-ratio: 1 / 1;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.instagram-logo-card:hover {
+  background-color: #eaeaea;
+}
+
+.logo-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-content .insta-logo {
+  width: 60%;
+  height: 60%;
+  margin-top: 100px;
+}
+
+.logo-content p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 6px;
+}
+
+.instagram-info p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* ===============================
+     텍스트 애니메이션 & 키프레임
+  ================================== */
+.fade-in-left {
+  animation: fadeInLeft 2s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1.75s forwards;
+}
+
+.fade-in-text {
+  animation: fadeInText 1s ease forwards;
+}
+
+.fade-in-item {
+  animation: slideInUp 1s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+
+  .banner-section {
+    height: calc(100vw * 0.5);
+  }
+
+  .banner-container {
+    width: 100%;
+  }
+
+  .banner-slide {
+    width: calc(100vw - 80px);
+    height: calc(100vw * 0.5);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 20px 0;
+  }
+
+  .logo img {
+    width: 60%;
+    padding-top: 20px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    font-size: 18px;
+    gap: 30px;
+    padding: 20px 0;
+    flex-direction: column;
+  }
+
+  .nav-item {
+    width: 100%;
+    align-items: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    margin-top: 8px;
+  }
+
+  .nav-dropdown-background {
+    display: none !important;
+  }
+
+  .banner-container,
+  .about-container,
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .about-container {
+    padding-top: 60px;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .about-text {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .about-image {
+    width: 90%;
+  }
+
+  .vips-menu {
+    padding: 100px 0 40px;
+  }
+
+  .menu-container {
+    padding: 0 20px;
+  }
+
+  .menu-item {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .menu-content {
+    font-size: 18px;
+    top: 14px;
+    left: 14px;
+  }
+
+  .add-button {
+    font-size: 14px;
+    padding: 4px 8px;
+    top: 46px;
+    right: 14px;
+  }
+
+  .instagram-container {
+    padding: 0 16px;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .sns-title {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-section,
+  .banner-slide {
+    height: 56.25vw;
+  }
+
+  .banner-container {
+    gap: 20px;
+  }
+
+  .about-text h2 {
+    font-size: 22px;
+  }
+
+  .about-text p {
+    font-size: 13px;
+  }
+
+  .vips-menu h2 {
+    font-size: 28px;
+  }
+
+  .vips-menu h2 span {
+    font-size: 36px;
+  }
+
+  .menu-content {
+    font-size: 16px;
+  }
+
+  .add-button {
+    font-size: 13px;
+    padding: 4px 6px;
+    top: 44px;
+    right: 12px;
+  }
+
+  .instagram-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .logo-content .insta-logo {
+    width: 36px;
+    height: 36px;
+    margin-top: 24px;
+  }
+
+  .logo-content p {
+    font-size: 12px;
+  }
+
+  .sns-title {
+    font-size: 20px;
+  }
+
+  .logo img {
+    width: 50%;
+    padding-top: 10px;
+  }
+
+  .nav {
+    flex-direction: column;
+    font-size: 14px;
+    gap: 14px;
+    padding: 16px 0;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .logo img {
+    width: 50%;
+  }
+
+  .nav {
+    font-size: 14px;
+    gap: 14px;
+  }
+
+  .menu-content {
+    font-size: 16px;
+  }
+
+  .add-button {
+    font-size: 13px;
+    padding: 4px 7px;
+    top: 44px;
+    right: 12px;
+  }
+
+  .vips-menu h2 {
+    font-size: 28px;
+  }
+
+  .vips-menu h2 span {
+    font-size: 36px;
+  }
+
+  .about-text h2 {
+    font-size: 24px;
+  }
+
+  .about-text p {
+    font-size: 13.5px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .logo img {
+    width: 45%;
+  }
+
+  .nav {
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .about-text h2 {
+    font-size: 20px;
+  }
+
+  .about-text p {
+    font-size: 12px;
+  }
+
+  .menu-content {
+    font-size: 14px;
+  }
+
+  .add-button {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .sns-title {
+    font-size: 18px;
+  }
+
+  .logo-content p {
+    font-size: 11px;
+  }
+}
+
+@css /* =============================== 반응형: Header / Logo / Navigation / DropdownMenu ================================== */ @media screen and (max-width: 1024px) {
+  .header {
+    padding: 20px 0;
+  }
+
+  .logo img {
+    width: 60%;
+    padding-top: 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 24px;
+    font-size: 18px;
+    padding: 20px 0;
+  }
+
+  .nav-item {
+    width: 100%;
+    align-items: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    margin-top: 8px;
+  }
+
+  .nav-dropdown-background {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .logo img {
+    width: 50%;
+    padding-top: 10px;
+  }
+
+  .nav {
+    font-size: 14px;
+    gap: 14px;
+    padding: 16px 0;
+  }
+
+  .nav-item > a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .logo img {
+    width: 45%;
+  }
+
+  .nav {
+    font-size: 13px;
+    gap: 10px;
+  }
+}
+
+/* =============================== 반응형: 배너 ================================== */
+@media screen and (max-width: 1280px) {
+  .banner-section {
+    height: calc(100vw * 0.5);
+  }
+
+  .banner-container {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .banner-slide {
+    width: 100%;
+    height: auto;
+  }
+
+  .banner-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .banner-indicators {
+    bottom: 12px;
+    gap: 8px;
+  }
+}
+
+/* =============================== 반응형: About 섹션 ================================== */
+@media screen and (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px;
+    margin-left: 0;
+  }
+
+  .about-text,
+  .about-image {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .about-image {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .about-text h2 {
+    font-size: 24px;
+  }
+
+  .about-text p {
+    font-size: 13.5px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .about-text h2 {
+    font-size: 20px;
+  }
+
+  .about-text p {
+    font-size: 12px;
+  }
+}
+
+/* =============================== 반응형: 메뉴 섹션 ================================== */
+@media screen and (max-width: 1024px) {
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .menu-item {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .menu-content {
+    font-size: 18px;
+    top: 14px;
+    left: 14px;
+  }
+
+  .add-button {
+    font-size: 14px;
+    padding: 4px 8px;
+    top: 46px;
+    right: 14px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .menu-content {
+    font-size: 16px;
+  }
+
+  .add-button {
+    font-size: 13px;
+    padding: 4px 6px;
+    top: 44px;
+    right: 12px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .menu-content {
+    font-size: 14px;
+  }
+
+  .add-button {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+}
+
+/* =============================== 반응형: 인스타그램 섹션 ================================== */
+@media screen and (max-width: 1024px) {
+  .instagram-container {
+    padding: 0 16px;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .sns-title {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .instagram-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .logo-content .insta-logo {
+    width: 36px;
+    height: 36px;
+    margin-top: 24px;
+  }
+
+  .logo-content p {
+    font-size: 12px;
+  }
+
+  .sns-title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .sns-title {
+    font-size: 18px;
+  }
+
+  .logo-content p {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .vips-menu h2 {
+    font-size: 36px;
+  }
+  .vips-menu h2 span {
+    font-size: 46px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .vips-menu h2 {
+    font-size: 28px;
+  }
+  .vips-menu h2 span {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .vips-menu h2 {
+    font-size: 24px;
+  }
+  .vips-menu h2 span {
+    font-size: 30px;
+  }
+}
